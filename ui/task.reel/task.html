@@ -20,11 +20,11 @@
                 "checked": {"<->": "@owner.task.completed"}
             }
         },
-        "text": {
-            "prototype": "digit/ui/text.reel",
+        "textField": {
+            "prototype": "digit/ui/text-field.reel",
             "properties": {
-                "element": {"#": "text"},
-                "value": "Text"
+                "element": {"#": "textField"},
+                "placeholderValue": "Text"
             },
             "bindings": {
                 "value": {"<->": "@owner.task.title"}
@@ -36,7 +36,9 @@
 <body>
     <div data-montage-id="owner" class="Task">
         <input type="checkbox" data-montage-id="checkbox">
-        <p data-montage-id="text"></p>
+
+        </input>
+        <input data-montage-id="textField" type="text">
     </div>
 </body>
 </html>
